@@ -34,7 +34,7 @@ This will deploy the contracts deterministically and verify the contracts on eth
 
 Preparation:
 - Set `MNEMONIC` in `.env` like `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat`
-- Set `INFURA_PROJECT_ID` in `.env`
+- Set `INFURA_KEY` in `.env` (Infura.io Project Id)
 - Set `ETHERSCAN_API_KEY` in `.env`
 
 ```bash

@@ -17,7 +17,7 @@ const argv = yargs
 
 // Load environment variables.
 dotenv.config();
-const { NODE_URL, INFURA_PROJECT_ID, MNEMONIC, ETHERSCAN_API_KEY, PK, SOLIDITY_VERSION, SOLIDITY_SETTINGS, CUSTOM_DETERMINISTIC_DEPLOYMENT } = process.env;
+const { NODE_URL, INFURA_KEY, MNEMONIC, ETHERSCAN_API_KEY, PK, SOLIDITY_VERSION, SOLIDITY_SETTINGS, CUSTOM_DETERMINISTIC_DEPLOYMENT } = process.env;
 
 const DEFAULT_MNEMONIC =
   "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat";
@@ -31,7 +31,7 @@ if (PK) {
   };
 }
 
-if (["mainnet", "rinkeby", "kovan", "goerli"].includes(argv.network) && INFURA_PROJECT_ID === undefined) {
+if (["mainnet", "rinkeby", "kovan", "goerli"].includes(argv.network) && INFURA_KEY === undefined) {
   throw new Error(
     `Could not find Infura key in env, unable to connect to network ${argv.network}`,
   );
@@ -79,7 +79,7 @@ const userConfig: HardhatUserConfig = {
     },
     mainnet: {
       ...sharedNetworkConfig,
-      url: `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
     },
     xdai: {
       ...sharedNetworkConfig,
@@ -91,19 +91,19 @@ const userConfig: HardhatUserConfig = {
     },
     rinkeby: {
       ...sharedNetworkConfig,
-      url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
     },
     goerli: {
       ...sharedNetworkConfig,
-      url: `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
     },
     kovan: {
       ...sharedNetworkConfig,
-      url: `https://kovan.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
     },
     polygon: {
       ...sharedNetworkConfig,
-      url: `https://polygon-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
     },
     volta: {
       ...sharedNetworkConfig,
