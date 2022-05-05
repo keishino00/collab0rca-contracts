@@ -57,6 +57,10 @@ yarn hardhat --network <network> local-verify
 
 If deployment is success, you will find abi json files in deployments directory.
 
+If a contract has been previously Compiled and is not changed in this commit, maybe the previous contract is reused.
+
+The Contract to create the Safe is the `GnosisSafeProxyFactory`.
+
 #### Custom Networks
 
 It is possible to use the `NODE_URL` env var to connect to any EVM based network via an RPC endpoint. This connection then can be used with the `custom` network.
