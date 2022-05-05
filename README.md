@@ -37,8 +37,9 @@ To add support for a new network follow the steps of the ``Deploy`` section and 
 This will deploy the contracts deterministically and verify the contracts on etherscan using [Solidity 0.7.6](https://github.com/ethereum/solidity/releases/tag/v0.7.6) by default.
 
 Preparation:
-- Set `MNEMONIC` in `.env`
-- Set `INFURA_KEY` in `.env`
+- Set `MNEMONIC` in `.env` like `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat`
+- Set `INFURA_PROJECT_ID` in `.env`
+- Set `ETHERSCAN_API_KEY` in `.env`
 
 ```bash
 yarn deploy-all <network>
@@ -53,6 +54,8 @@ yarn hardhat --network <network> sourcify
 yarn hardhat --network <network> etherscan-verify
 yarn hardhat --network <network> local-verify
 ```
+
+If deployment is success, you will find abi json files in deployments directory.
 
 #### Custom Networks
 

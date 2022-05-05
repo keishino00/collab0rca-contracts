@@ -65,7 +65,7 @@ const userConfig: HardhatUserConfig = {
     },
     mainnet: {
       ...sharedNetworkConfig,
-      url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+      url: `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
     },
     xdai: {
       ...sharedNetworkConfig,
@@ -77,11 +77,11 @@ const userConfig: HardhatUserConfig = {
     },
     rinkeby: {
       ...sharedNetworkConfig,
-      url: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
+      url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
     },
     goerli: {
       ...sharedNetworkConfig,
-      url: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+      url: `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`,
     },
     ropsten: {
       ...sharedNetworkConfig,
@@ -89,7 +89,7 @@ const userConfig: HardhatUserConfig = {
     },
     kovan: {
       ...sharedNetworkConfig,
-      url: `https://kovan.infura.io/v3/${INFURA_KEY}`,
+      url: `https://kovan.infura.io/v3/${INFURA_PROJECT_ID}`,
     },
     mumbai: {
       ...sharedNetworkConfig,
@@ -97,7 +97,7 @@ const userConfig: HardhatUserConfig = {
     },
     polygon: {
       ...sharedNetworkConfig,
-      url: `https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`,
+      url: `https://polygon-mainnet.infura.io/v3/${INFURA_PROJECT_ID}`,
     },
     volta: {
       ...sharedNetworkConfig,
